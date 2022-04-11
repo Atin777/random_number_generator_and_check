@@ -30,12 +30,12 @@
 		if(z != '') { //User field id = result empty field validation
 			if(z == (x+y)) //User input versus generated random integers check
 			{
-				out = "Ok!"; //Display if condition satisfies
+				out = "<font color="green"><b>Wow!...You are correct!</b></font>"; //Display if condition satisfies
 			} else{
-				out = "Not Ok!"; //Display if condition does not satisfy
+				out = "<font color="yellow"><b>Oops...The result is incorrect!</b></font>"; //Display if condition does not satisfy
 			}
 		} else {
-			out = "Enter all details!"; //Display if user field id = result is empty
+			out = "<font color="red"><b>Please enter the field!</b></font>"; //Display if user field id = result is empty
 		}
 		
 		document.getElementById("output").innerHTML = out; //Display output messages in id = output
