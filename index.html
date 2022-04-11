@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Kreeti Script</title>
+	</head>
+	<body>
+		<p align="center" id="number_1"></p>
+		<p align="center">+</p>
+		<p align="center" id="number_2"></p>
+		<p align="center">=</p>
+		<p align="center"><input id="result"></p>
+		<p align="center"><button onclick="reset_submit()">Play Again!</button> <button onclick="after_submit()">Check!</button></p>
+		<p align="center" id="output"></p>
+	<script>
+
+	let x = Math.floor((Math.random() * 10) + 1);
+	document.getElementById("number_1").innerHTML = x;
+
+	let y = Math.floor((Math.random() * 10) + 1);
+	document.getElementById("number_2").innerHTML = y
+
+	function after_submit() {
+		let z = document.getElementById("result").value;
+		let out;
+		
+		if(z != ''){
+			if(z == (x+y))
+			{
+				out = "Ok!";
+			} else{
+				out = "Not Ok!";
+			}
+		} else {
+			out = "Enter all details!";
+		}
+		
+		document.getElementById("output").innerHTML = out;
+		
+	}	
+
+	function reset_submit() {
+		window.location.reload();
+	}
+</script>
+</body>
+</html>
